@@ -4,7 +4,6 @@ session_start();
 include('DBconnection.php');
 
 //include('wideimage/WideImage.php');
-require('wideimage/WideImage.php');
 
 
 //checking connection

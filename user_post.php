@@ -3,7 +3,7 @@ session_start();
 
 include('DBconnection.php');
 
-include('wideimage/WideImage.php');
+//include('wideimage/WideImage.php');
 
 //checking connection
 if(mysqli_connect_errno())
@@ -18,8 +18,8 @@ if($_POST){
     $post_username = $_POST["username"];
     $ignoreImage = 0;
 
-    /*$query =  "Select * from users WHERE user_name='".$post_username."'";
-    echo $query;*/
+    $query =  "Select * from users WHERE user_name='".$post_username."'";
+    echo $query;
 
 
     if($ignoreImage != 1){

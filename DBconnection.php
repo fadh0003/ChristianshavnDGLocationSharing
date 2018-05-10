@@ -1,6 +1,7 @@
 <?php
 require('vendor/autoload.php');
 
+
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];

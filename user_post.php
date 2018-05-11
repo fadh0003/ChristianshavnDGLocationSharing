@@ -49,16 +49,17 @@ if(mysqli_connect_errno())
             if(in_array($fileAcualExt, $allowed)){
                 //if file is allowed and have no error
                 if($imageError === 0){
-                    $newImageName = uniqid() . "." . $fileAcualExt;
+                    $newImageName = $fileExt[0] . "_" . uniqid() . "." . $fileAcualExt;
+                    echo $newImageName;
 
                     //select userid query
-                    $useridquery =  mysqli_query($DB_connection, "SELECT user_id FROM users WHERE user_name = '$post_username'") or die('ERROR: SQL query problem' . mysqli_error($DB_connection));
+                    /*$useridquery =  mysqli_query($DB_connection, "SELECT user_id FROM users WHERE user_name = '$post_username'") or die('ERROR: SQL query problem' . mysqli_error($DB_connection));
                     $row = mysqli_fetch_assoc($useridquery);
                     $userid = $row['user_id'];
                     //insert post query
                     $postsquery = mysqli_query($DB_connection, "INSERT INTO posts (post_text, post_image, post_date, fk_user_id) VALUES('$post_text', '$newImageName', CURRENT_TIMESTAMP, $userid)") or die('ERROR: SQL query problem' . mysqli_error($DB_connection));
                     $querystring = "INSERT INTO posts (post_text, post_image, post_date, fk_user_id) VALUES('$post_text', '30590797_946679478834376_6124683747041214464_n.jpg', CURRENT_TIMESTAMP, $userid)";
-                    //echo $querystring;
+                    //echo $querystring;*/
 
                     echo "posted";
                 } else {

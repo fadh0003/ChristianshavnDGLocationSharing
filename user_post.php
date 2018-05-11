@@ -42,7 +42,7 @@ if($_POST){
 
         $allowed = array('jpg', 'jpeg');
         //checks if $fileAcualExt is inside $allowed array
-        if(in_array($fileAcualExt, $allowed)){
+        /*if(in_array($fileAcualExt, $allowed)){
             //if file is allowed and have no error
             if($imageError === 0){
                 $newImageName = uniqid() . "_" . $fileAcualExt;
@@ -55,7 +55,7 @@ if($_POST){
         } else {
             //failed
             echo "You cannot upolaod this type of file";
-        }
+        }*/
 
         //select userid query
         $useridquery =  mysqli_query($DB_connection, "SELECT user_id FROM users WHERE user_name = '$post_username'") or die('ERROR: SQL query problem' . mysqli_error($DB_connection));

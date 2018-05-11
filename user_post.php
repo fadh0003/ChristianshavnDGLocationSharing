@@ -33,6 +33,11 @@ if($_POST){
         $imageType = $_FILES['postimage']['type'];
 
         $fileExt = explode('.', $imageName); //image . jpg
+
+        echo $fileExt;
+        echo "</br>";
+        echo $imageError;
+
         $fileAcualExt = strtolower(end($fileExt)); //jpg
 
         $allowed = array('jpg', 'jpeg');

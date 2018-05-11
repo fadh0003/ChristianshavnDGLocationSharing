@@ -23,9 +23,14 @@ if(mysqli_connect_errno())
     
     
         if($ignoreImage != 1){
-    
-    
-            $imageName = $_FILES['postimage']['name'];
+
+            if(isset($_FILES['postimage'])){
+                echo "Success!";
+            } else {
+                echo "failed";
+            }
+
+            /*$imageName = $_FILES['postimage']['name'];
             $imageTmpName = $_FILES['postimage']['tmp_name'];
             $imageSize = $_FILES['postimage']['size'];
             $imageError = $_FILES['postimage']['error'];

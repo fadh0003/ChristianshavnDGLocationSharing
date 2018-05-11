@@ -39,6 +39,8 @@ if(mysqli_connect_errno())
             $fileExt = explode('.', $imageName); //image . jpg
     
             print_r($imageName);
+            echo "</br>";
+            print_r($fileExt);
     
             $fileAcualExt = strtolower(end($fileExt)); //jpg
     

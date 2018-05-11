@@ -40,7 +40,7 @@ if($_POST){
         if(in_array($fileAcualExt, $allowed)){
             //if file is allowed and have no error
             if($imageError === 0){
-                $newImageName = uniqid('', true) . "_" . $fileAcualExt;
+                $newImageName = uniqid() . "_" . $fileAcualExt;
                 $fileDestination = 'UploadImages/'.$newImageName;
                 move_uploaded_file($imageTmpName, $fileDestination);
                 echo "image uploaded";

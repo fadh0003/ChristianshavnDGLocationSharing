@@ -63,7 +63,7 @@ if(mysqli_connect_errno())
                 //echo $querystring;
 
 
-                    echo "image uploaded";
+                    //echo "image uploaded";
                 } else {
                     echo "There was an error upolading this file";
                 }

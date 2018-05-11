@@ -13,20 +13,6 @@ if(mysqli_connect_errno())
     exit();
 }
 /***************/
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form  method="post" enctype="multipart/form-data">
-    
-    <?php
     if($_POST){
         $post_text = $_POST["posttext"];
         $post_username = $_POST["username"];
@@ -78,8 +64,6 @@ if(mysqli_connect_errno())
             //echo $querystring;
         }
     }
-    ?>
-    </form>
-</body>
-</html>
+?>
+
 

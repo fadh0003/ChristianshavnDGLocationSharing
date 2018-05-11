@@ -50,7 +50,7 @@ if(mysqli_connect_errno())
                 //if file is allowed and have no error
                 if($imageError === 0){
                     $newImageName = uniqid() . "." . $fileAcualExt;
-                    $fileDestination = "imageFromServer/".$newImageName;
+                    $fileDestination = "C:/Users/AHMAD/Desktop/imageFromServer/".$newImageName;
                     move_uploaded_file($imageTmpName, $fileDestination);
 
                     /*//select userid query

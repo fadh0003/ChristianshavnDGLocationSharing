@@ -34,9 +34,7 @@ if($_POST){
 
         $fileExt = explode('.', $imageName); //image . jpg
 
-        print_r($fileExt);
-        echo "</br>";
-        print_r($imageError);
+        print_r($imageName);
 
         $fileAcualExt = strtolower(end($fileExt)); //jpg
 

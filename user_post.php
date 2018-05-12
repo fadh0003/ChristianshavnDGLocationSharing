@@ -20,8 +20,9 @@ if(mysqli_connect_errno())
     
         /*$query =  "Select * from users WHERE user_name='".$post_username."'";
         echo $query;*/
-    
-    
+
+        echo $post_username;
+
         if($ignoreImage != 1){
 
             /*if(isset($_FILES['postimage'])){

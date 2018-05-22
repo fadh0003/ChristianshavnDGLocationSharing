@@ -45,7 +45,7 @@ if(mysqli_connect_errno())
             echo "</br>";
             print_r($fileAcualExt);
     
-            $allowed = array('jpg', 'jpeg');
+            $allowed = array('jpg', 'jpeg', 'png');
             //checks if $fileAcualExt is inside $allowed array
             if(in_array($fileAcualExt, $allowed)){
                 //if file is allowed and have no error

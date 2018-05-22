@@ -19,7 +19,8 @@ if(mysqli_connect_errno())
     //$row = mysqli_fetch_assoc($fetchuserpost); 
     while($row = mysqli_fetch_assoc($fetchuserpost)){ 
         
-        echo $row['user_name']. " " .$row['post_image']. " " .$row['post_text'];
-        echo " ";
+        echo $row['user_name'];
+        echo $row['post_image'];
+        echo $row['post_text'];
     }
 ?>

@@ -28,19 +28,37 @@ if($_POST){
 
     $matchUserPassword = $fetchUserTypeLogin['user_password'];
 
+    $validateUsername = '';
+    $validatePassword = '';
+    
+    if($username == $fetchUserTypeLogin){
+        $validateUsername = true;
+        echo "correctUsername";
+    } else {
+        $validateUsername = false;
+        echo "incorrectUsername";
+    }
+    
     if(password_verify($password, $matchUserPassword)){
         
         $_SESSION['user_id'] = $fetchUserTypeLogin['user_id'];
         $_SESSION['user_name'] = $fetchUserTypeLogin['user_name'];
+        
+        $validatePassword = true;
+        echo "correctPassword";
+    }
+    else {
+        $validatePassword = false;
+        echo "incorrectPassword";
+    }
 
-
+    if($validateUsername && $validatePassword){
         if($fetchUserTypeLogin['fk_role_id'] == 2){
             echo "0";
         }
-
     }
-    else{
-        echo "your login info is incorrect, please create an account";
+    else {
+        echo "Login information does not exist";
     }
 }
 

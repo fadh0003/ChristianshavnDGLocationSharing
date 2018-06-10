@@ -52,8 +52,10 @@ if($_POST){
 
     if($validateUsername && $validatePassword){
         if($fetchUserTypeLogin['fk_role_id'] == 2){
-            echo "0";
+            echo "0 |";
         }
+    } else {
+        echo "noAccount";
     }
 }
 

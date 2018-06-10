@@ -35,7 +35,7 @@ if($_POST){
         $validateUsername = true;
     } else {
         $validateUsername = false;
-        echo "incorrectUsername ";
+        echo "incorrectUsername |";
     }
     
     if(password_verify($password, $matchUserPassword)){
@@ -47,7 +47,7 @@ if($_POST){
     }
     else {
         $validatePassword = false;
-        echo "incorrectPassword ";
+        echo "incorrectPassword |";
     }
 
     if($validateUsername && $validatePassword){

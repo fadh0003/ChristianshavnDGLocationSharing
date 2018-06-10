@@ -53,7 +53,7 @@ if($_POST){
             echo "0";
         }
     } 
-    if($validateUsername || $validatePassword){
+    if(!($validateUsername && $validatePassword)){
         echo "incorrectPassOrUser";
     } 
     else {

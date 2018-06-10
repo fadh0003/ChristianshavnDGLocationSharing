@@ -26,7 +26,6 @@ if($_POST){
 
     if($rowusername['user_name'] == $username){
         echo "3: Name already exsits";
-        exit();
     } 
     
     $emailcheckquery = "SELECT user_email FROM users WHERE user_email = '" .$email. "';";
@@ -35,7 +34,6 @@ if($_POST){
     
     if($rowuseremail['user_email'] == $email){
         echo "4: Email already exsits";
-        exit();
     } else {
     $passwordhash = password_hash($password, PASSWORD_DEFAULT);    
     mysqli_query($DB_connection, "INSERT INTO users(user_name, user_email, user_password, fk_role_id) VALUES('$username','$email', '$passwordhash', '2')") or die ('ERROR: SQL query problem' . mysqli_error($DB_connection));

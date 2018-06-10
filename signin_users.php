@@ -52,11 +52,7 @@ if($_POST){
         if($fetchUserTypeLogin['fk_role_id'] == 2){
             echo "0";
         }
-    } 
-    if(!($validateUsername && $validatePassword)){
-        echo "incorrectPassOrUser";
-    } 
-    else {
+    } else {
         echo "wronginfo";
     }
 

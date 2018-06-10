@@ -31,7 +31,7 @@ if($_POST){
     $validateUsername = '';
     $validatePassword = '';
     
-    if($username == $fetchUserTypeLogin){
+    if($username == $fetchUserTypeLogin['user_name']){
         $validateUsername = true;
         echo "correctUsername";
     } else {

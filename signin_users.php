@@ -48,12 +48,12 @@ if($_POST){
         $validatePassword = false;
     }
 
-    if($validatePassword && $validateUsername){
+    if(!($validatePassword && $validateUsername)){
+        echo "wronginfo";
+    } else {
         if($fetchUserTypeLogin['fk_role_id'] == 2){
             echo "0";
         }
-    } else {
-        echo "wronginfo";
     }
 
 }

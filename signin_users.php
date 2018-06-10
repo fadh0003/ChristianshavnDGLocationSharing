@@ -29,7 +29,13 @@ if($_POST){
     $matchUserPassword = $fetchUserTypeLogin['user_password'];
 
     $validatePassword = '';
+    $validateUsername = '';
 
+    if($username == $fetchUserTypeLogin['$user_name']){
+        $validateUsername = true;
+    } else {
+        $validateUsername = false;
+    }
     
     if(password_verify($password, $matchUserPassword)){
         
@@ -40,13 +46,14 @@ if($_POST){
     }
     else {
         $validatePassword = false;
-        echo "incorrectPassword";
     }
 
-    if($validatePassword){
+    if($validatePassword && $validateUsername){
         if($fetchUserTypeLogin['fk_role_id'] == 2){
             echo "0";
         }
+    } else {
+        echo "wronginfo";
     }
 
 }
